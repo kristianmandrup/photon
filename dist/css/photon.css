@@ -584,6 +584,15 @@ h6 {
   margin-right: 4px;
 }
 
+dialog {
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
 label {
   display: inline-block;
   font-size: 13px;
@@ -658,13 +667,31 @@ textarea {
   margin-right: 0;
 }
 
-.pane-group {
+.window-content > .pane-group {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.pane-group {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.pane-group-vertical {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pane-group-vertical > .pane {
+  border-left: 0;
+  border-top: 1px solid #ddd;
+}
+.pane-group-vertical > .pane:first-child {
+  border-top: 0;
 }
 
 .pane {
@@ -2233,6 +2260,38 @@ img {
 }
 
 /* '' */
+.splitter {
+  background: transparent;
+  width: 1px;
+  position: relative;
+}
+
+.splitter-zone {
+  z-index: 1000;
+  cursor: col-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  right: -5px;
+}
+
+.splitter-vertical {
+  background: transparent;
+  height: 1px;
+  position: relative;
+}
+
+.splitter-zone-vertical {
+  z-index: 1000;
+  cursor: row-resize;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+
 table {
   width: 100%;
   border: 0;
