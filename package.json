@@ -37,7 +37,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-html": "^8.0.2",
     "grunt-jekyll": "^0.4.4",
-    "grunt-sed": "twbs/grunt-sed#v0.2.0",
+    "grunt-sed": "kristianmandrup/grunt-sed#master",
     "load-grunt-tasks": "~3.5.0",
     "time-grunt": "~1.3.0"
   }
