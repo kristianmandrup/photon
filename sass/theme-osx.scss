@@ -1,0 +1,417 @@
+@import "mixins.scss";
+
+//
+// OSX theme styles
+// Visuals and interactions in the style of OS X
+// --------------------------------------------------
+
+// Variables
+// --------------------------------------------------
+
+// Type
+
+$font-path: '../fonts/' !default;
+// Try to use the system's font on whatever platform the user is on.
+$font-family-default: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif !default;
+$font-size-default: 13px !default;
+$font-weight: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-light: 300 !default;
+$line-height-default: 1.6 !default;
+
+
+// Colors
+
+// Main colors
+$primary-color: #3b99fc !default;
+$chrome-color:  #fff !default;
+
+// Copy
+$gray-color: #333 !default;
+
+// Borders
+$border-color: #ddd !default;
+$dark-border-color: #c2c0c2 !default;
+$darker-bottom-border-color: #a19fa1 !default;
+
+// Action colors
+$default-color:  #fff !default;
+$positive-color: #34c84a !default;
+$negative-color: #fc605b !default;
+$warning-color: #fdbc40 !default;
+
+// Shades
+$dark-color: #57acf5 !default;
+
+// Focus and active colors
+$active-color: #116cd6;
+$focus-input-color: lighten($primary-color, 10%)  !default;
+
+// Border radius
+$default-border-radius: 4px;
+
+// Padding
+$padding: 10px;
+$padding-mini: 3px;
+$padding-less: 5px;
+$padding-more: 20px;
+
+// Bars
+// --------------------------------------------------
+
+.toolbar {
+  box-shadow: inset 0 1px 0 #f5f4f5;
+  @include linear-gradient(#e8e6e8, #d1cfd1);
+}
+
+.toolbar-header {
+  border-bottom: 1px solid $dark-border-color;
+}
+
+.toolbar-footer {
+  border-top: 1px solid $dark-border-color;
+}
+
+// Buttons in toolbars
+.toolbar-actions {
+  margin-top: 4px;
+  margin-bottom: 3px;
+  padding-right: $padding-mini;
+  padding-left: $padding-mini;
+  padding-bottom: $padding-mini;
+}
+
+// Simple centered title to go in the toolbar
+.title {
+  font-weight: 400;
+  color: #555;
+}
+
+// Buttons
+// --------------------------------------------------
+
+.btn {
+  border-radius: $default-border-radius;
+  box-shadow: 0 1px 1px rgba(0,0,0,.06);
+}
+
+// Button groups
+// --------------------------------------------------
+
+.btn-group {
+  .btn + .btn {
+    border-left: 1px solid $dark-border-color;
+  }
+
+  // Selected state
+  .active {
+    color: #fff;
+    background-color: #6d6c6d;
+  }
+
+  // Invert the icon in the active button
+  .active .icon {
+    color: #fff;
+  }
+}
+
+// Normal buttons
+.btn-default {
+  color: $gray-color;
+  border-top-color: $dark-border-color;
+  border-right-color: $dark-border-color;
+  border-bottom-color: $darker-bottom-border-color;
+  border-left-color: $dark-border-color;
+  @include linear-gradient(#fcfcfc, #f1f1f1);
+
+  &:active {
+    background-color: #ddd;
+    background-image: none;
+  }
+}
+
+// Button variations
+.btn-primary,
+.btn-positive,
+.btn-negative,
+.btn-warning {
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+// For primary buttons
+.btn-primary {
+  border-color: #388df8;
+  border-bottom-color: darken(#388df8, 15%);
+  @include linear-gradient(#6eb4f7, #1a82fb);
+
+  &:active {
+    @include linear-gradient(darken(#6eb4f7, 10%), darken(#1a82fb, 10%));
+  }
+}
+
+// For positive buttons
+.btn-positive {
+  border-color: darken($positive-color, 10%);
+  border-bottom-color: darken($positive-color, 15%);
+  @include linear-gradient(lighten($positive-color, 10%), darken($positive-color, 10%));
+
+  &:active {
+    @include linear-gradient($positive-color, darken($positive-color, 15%));
+  }
+}
+
+// For negative actions
+.btn-negative {
+  border-color: darken($negative-color, 10%);
+  border-bottom-color: darken($negative-color, 15%);
+  @include linear-gradient(lighten($negative-color, 10%), darken($negative-color, 10%));
+
+  &:active {
+    @include linear-gradient($negative-color, darken($negative-color, 15%));
+  }
+}
+
+// For warning actions
+.btn-warning {
+  border-color: darken($warning-color, 10%);
+  border-bottom-color: darken($warning-color, 15%);
+  @include linear-gradient(lighten($warning-color, 10%), darken($warning-color, 10%));
+
+  &:active {
+    @include linear-gradient($warning-color, darken($warning-color, 15%));
+  }
+}
+
+// Link buttons
+.btn-link {
+  color: $primary-color;
+  box-shadow: none;
+
+  &:active {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Icons in buttons
+.btn .icon {
+  color: #737475;
+}
+
+
+// Forms
+// --------------------------------------------------
+
+.form-control {
+  background-color: $chrome-color;
+  border: 1px solid $border-color;
+  border-radius: $default-border-radius;
+
+  &:focus {
+    border-color: $focus-input-color;
+    box-shadow: 0 0 0 3px $focus-input-color;
+  }
+}
+
+
+// Grid
+// --------------------------------------------------
+
+.pane {
+  border-left: 1px solid $border-color;
+}
+
+
+// Images
+// --------------------------------------------------
+
+.img-rounded {
+  border-radius: $default-border-radius;
+}
+
+
+// Lists
+// --------------------------------------------------
+
+.list-group-item {
+  color: #414142;
+  border-top: 1px solid $border-color;
+
+  &.active,
+  // `.selected` is deprecated. Use `.active` instead.
+  &.selected {
+    background-color: $active-color;
+  }
+}
+
+
+// Navs
+// --------------------------------------------------
+
+.nav-group-item {
+  padding: 2px 10px 2px 25px;
+  color: $gray-color;
+
+  &:active,
+  &.active {
+    background-color: #dcdfe1;
+  }
+
+  .icon {
+    color: #737475;
+  }
+}
+
+.nav-group-title {
+  font-size: 12px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: lighten($gray-color, 20%);
+}
+
+
+// Tables
+// --------------------------------------------------
+
+thead {
+  background-color: #f5f5f4;
+}
+
+.table-striped tr:nth-child(even) {
+   background-color: #f5f5f4;
+}
+
+tr:active,
+.table-striped tr:active:nth-child(even) {
+  color: #fff;
+  background-color: $active-color;
+}
+
+thead tr:active {
+  color: $gray-color;
+  background-color: #f5f5f4;
+}
+
+th {
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+
+// Tabs
+// --------------------------------------------------
+
+.tab-group {
+  border-top: 1px solid #989698;
+  border-bottom: 1px solid #989698;
+}
+
+.tab-item {
+  border-left: 1px solid #989698;
+  @include linear-gradient(#b8b6b8, #b0aeb0);
+
+  &.active {
+    @include linear-gradient(#d4d2d4, #cccacc);
+  }
+
+  .icon-close-tab {
+    color: #666;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(0,0,0,.08);
+    opacity: 0;
+    transition: opacity .1s linear;
+    z-index: 1;
+  }
+
+  // Okay, I know... this is nuts but...
+  &:hover:not(.active):after {
+    opacity: 1;
+  }
+
+  .icon-close-tab:hover {
+    background-color: rgba(0,0,0,.08);
+  }
+}
+
+// Padding
+.padded {
+  padding: $padding;
+}
+
+.padded-less {
+  padding: $padding-less;
+}
+
+.padded-more {
+  padding: $padding-more;
+}
+
+// Vertical Padding
+.padded-vertically {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+.padded-vertically-less {
+  padding-top: $padding-less;
+  padding-bottom: $padding-less;
+}
+
+.padded-vertically-more {
+  padding-top: $padding-more;
+  padding-bottom: $padding-more;
+}
+
+// Horizontal Padding
+.padded-horizontally {
+  padding-right: $padding;
+  padding-left: $padding;
+}
+
+.padded-horizontally-less {
+  padding-right: $padding-less;
+  padding-left: $padding-less;
+}
+
+.padded-horizontally-more {
+  padding-right: $padding-more;
+  padding-left: $padding-more;
+}
+
+// Padding top
+.padded-top {
+  padding-top: $padding;
+}
+
+.padded-top-less {
+  padding-top: $padding-less;
+}
+
+.padded-top-more {
+  padding-top: $padding-more;
+}
+
+// Padding bottom
+.padded-bottom {
+  padding-bottom: $padding;
+}
+
+.padded-bottom-less {
+  padding-bottom: $padding-less;
+}
+
+.padded-bottom-more {
+  padding-bottom: $padding-more;
+}
+
+// Set the background-color to set a sidebar back a bit.
+.sidebar {
+  background-color: #f5f5f4;
+}

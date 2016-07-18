@@ -155,7 +155,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
   font-size: 13px;
   line-height: 1.6;
   color: #333;
@@ -313,7 +313,7 @@ h6 {
 }
 
 .sidebar {
-  background-color: #f5f5f4;
+  background-color: #fafafa;
 }
 
 .draggable {
@@ -344,8 +344,7 @@ h6 {
   cursor: default;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
   -webkit-app-region: no-drag;
 }
 .btn:focus {
@@ -368,18 +367,11 @@ h6 {
 
 .btn-default {
   color: #333;
-  border-top-color: #c2c0c2;
-  border-right-color: #c2c0c2;
-  border-bottom-color: #a19fa1;
-  border-left-color: #c2c0c2;
-  background-color: #fcfcfc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f1f1f1));
-  background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
-  background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
+  border-color: #ccc;
+  background-color: #fafafa;
 }
 .btn-default:active {
-  background-color: #ddd;
-  background-image: none;
+  background-color: #eee;
 }
 
 .btn-primary,
@@ -387,67 +379,42 @@ h6 {
 .btn-negative,
 .btn-warning {
   color: #fff;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
-  border-color: #388df8;
-  border-bottom-color: #0866dc;
-  background-color: #6eb4f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6eb4f7), color-stop(100%, #1a82fb));
-  background-image: -webkit-linear-gradient(top, #6eb4f7 0%, #1a82fb 100%);
-  background-image: linear-gradient(to bottom, #6eb4f7 0%, #1a82fb 100%);
+  background-color: #57acf5;
 }
 .btn-primary:active {
-  background-color: #3e9bf4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9bf4), color-stop(100%, #0469de));
-  background-image: -webkit-linear-gradient(top, #3e9bf4 0%, #0469de 100%);
-  background-image: linear-gradient(to bottom, #3e9bf4 0%, #0469de 100%);
+  background-color: #2794f2;
 }
 
 .btn-positive {
-  border-color: #29a03b;
-  border-bottom-color: #248b34;
-  background-color: #5bd46d;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5bd46d), color-stop(100%, #29a03b));
-  background-image: -webkit-linear-gradient(top, #5bd46d 0%, #29a03b 100%);
-  background-image: linear-gradient(to bottom, #5bd46d 0%, #29a03b 100%);
+  background-color: #34c84a;
 }
 .btn-positive:active {
-  background-color: #34c84a;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #34c84a), color-stop(100%, #248b34));
-  background-image: -webkit-linear-gradient(top, #34c84a 0%, #248b34 100%);
-  background-image: linear-gradient(to bottom, #34c84a 0%, #248b34 100%);
+  background-color: #29a03b;
 }
 
 .btn-negative {
-  border-color: #fb2f29;
-  border-bottom-color: #fb1710;
-  background-color: #fd918d;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd918d), color-stop(100%, #fb2f29));
-  background-image: -webkit-linear-gradient(top, #fd918d 0%, #fb2f29 100%);
-  background-image: linear-gradient(to bottom, #fd918d 0%, #fb2f29 100%);
+  background-color: #fc605b;
 }
 .btn-negative:active {
-  background-color: #fc605b;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fc605b), color-stop(100%, #fb1710));
-  background-image: -webkit-linear-gradient(top, #fc605b 0%, #fb1710 100%);
-  background-image: linear-gradient(to bottom, #fc605b 0%, #fb1710 100%);
+  background-color: #fb2f29;
 }
 
 .btn-warning {
-  border-color: #fcaa0e;
-  border-bottom-color: #ee9d02;
-  background-color: #fece72;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fece72), color-stop(100%, #fcaa0e));
-  background-image: -webkit-linear-gradient(top, #fece72 0%, #fcaa0e 100%);
-  background-image: linear-gradient(to bottom, #fece72 0%, #fcaa0e 100%);
+  background-color: #fdbc40;
 }
 .btn-warning:active {
-  background-color: #fdbc40;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdbc40), color-stop(100%, #ee9d02));
-  background-image: -webkit-linear-gradient(top, #fdbc40 0%, #ee9d02 100%);
-  background-image: linear-gradient(to bottom, #fdbc40 0%, #ee9d02 100%);
+  background-color: #fcaa0e;
+}
+
+.btn-link {
+  color: #57acf5;
+  background: none;
+}
+.btn-link:active {
+  color: #2794f2;
 }
 
 .btn .icon {
@@ -456,7 +423,7 @@ h6 {
   height: 14px;
   margin-top: 1px;
   margin-bottom: 1px;
-  color: #737475;
+  color: #888;
   font-size: 14px;
   line-height: 1;
 }
@@ -506,7 +473,7 @@ h6 {
   border-radius: 0;
 }
 .btn-group .btn + .btn {
-  border-left: 1px solid #c2c0c2;
+  border-left: 1px solid #ccc;
 }
 .btn-group .btn + .btn.active {
   border-left: 0;
@@ -514,7 +481,7 @@ h6 {
 .btn-group .active {
   color: #fff;
   border: 1px solid transparent;
-  background-color: #6d6c6d;
+  background-color: #777;
   background-image: none;
 }
 .btn-group .active .icon {
@@ -523,11 +490,6 @@ h6 {
 
 .toolbar {
   min-height: 22px;
-  box-shadow: inset 0 1px 0 #f5f4f5;
-  background-color: #e8e6e8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e6e8), color-stop(100%, #d1cfd1));
-  background-image: -webkit-linear-gradient(top, #e8e6e8 0%, #d1cfd1 100%);
-  background-image: linear-gradient(to bottom, #e8e6e8 0%, #d1cfd1 100%);
 }
 .toolbar:before, .toolbar:after {
   display: table;
@@ -538,37 +500,30 @@ h6 {
 }
 
 .toolbar-header {
-  border-bottom: 1px solid #c2c0c2;
+  border-bottom: 1px solid #ddd;
 }
 .toolbar-header .title {
   margin-top: 1px;
 }
 
 .toolbar-footer {
-  border-top: 1px solid #c2c0c2;
+  border-top: 1px solid #ddd;
   -webkit-app-region: drag;
 }
 
 .title {
   margin: 0;
   font-size: 12px;
-  font-weight: 400;
   text-align: center;
-  color: #555;
   cursor: default;
 }
 
-.toolbar-borderless {
-  border-top: 0;
-  border-bottom: 0;
-}
-
 .toolbar-actions {
-  margin-top: 4px;
-  margin-bottom: 3px;
-  padding-right: 3px;
-  padding-left: 3px;
-  padding-bottom: 3px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
   -webkit-app-region: drag;
 }
 .toolbar-actions:before, .toolbar-actions:after {
@@ -585,7 +540,7 @@ h6 {
 }
 
 label {
-  display: inline-block;
+  display: block;
   font-size: 13px;
   margin-bottom: 5px;
   white-space: nowrap;
@@ -612,12 +567,11 @@ input[type="checkbox"] {
   line-height: 1.6;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 3px;
   outline: none;
 }
 .form-control:focus {
-  border-color: #6db3fd;
-  box-shadow: 0 0 0 3px #6db3fd;
+  border-color: #87c4f8;
 }
 
 textarea {
@@ -677,6 +631,10 @@ textarea {
   border-left: 0;
 }
 
+.pane-borderless {
+  border-left: 0;
+}
+
 .pane-sm {
   max-width: 220px;
   min-width: 150px;
@@ -706,7 +664,7 @@ img {
 }
 
 .img-rounded {
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .list-group {
@@ -725,7 +683,7 @@ img {
 .list-group-item {
   padding: 10px;
   font-size: 12px;
-  color: #414142;
+  color: #555;
   border-top: 1px solid #ddd;
 }
 .list-group-item:first-child {
@@ -761,7 +719,7 @@ img {
 }
 
 .nav-group-item {
-  padding: 2px 10px 2px 25px;
+  padding: 5px 10px;
   display: block;
   color: #333;
   text-decoration: none;
@@ -770,13 +728,13 @@ img {
   text-overflow: ellipsis;
 }
 .nav-group-item:active, .nav-group-item.active {
-  background-color: #dcdfe1;
+  background-color: #ddd;
 }
 .nav-group-item .icon {
   width: 19px;
   height: 18px;
   float: left;
-  color: #737475;
+  color: #777;
   margin-top: -3px;
   margin-right: 7px;
   font-size: 18px;
@@ -786,7 +744,9 @@ img {
 .nav-group-title {
   margin: 0;
   padding: 10px 10px 2px;
-  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
   font-weight: 500;
   color: #666666;
 }
@@ -2242,7 +2202,7 @@ table {
 }
 
 thead {
-  background-color: #f5f5f4;
+  background-color: #f6f6f6;
 }
 
 tbody {
@@ -2250,7 +2210,7 @@ tbody {
 }
 
 .table-striped tr:nth-child(even) {
-  background-color: #f5f5f4;
+  background-color: #f6f6f6;
 }
 
 tr:active,
@@ -2261,7 +2221,7 @@ tr:active,
 
 thead tr:active {
   color: #333;
-  background-color: #f5f5f4;
+  background-color: #f6f6f6;
 }
 
 th {
@@ -2285,8 +2245,8 @@ td:last-child {
 .tab-group {
   margin-top: -1px;
   display: flex;
-  border-top: 1px solid #989698;
-  border-bottom: 1px solid #989698;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .tab-item {
@@ -2295,20 +2255,14 @@ td:last-child {
   padding: 3px;
   font-size: 12px;
   text-align: center;
-  border-left: 1px solid #989698;
-  background-color: #b8b6b8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8b6b8), color-stop(100%, #b0aeb0));
-  background-image: -webkit-linear-gradient(top, #b8b6b8 0%, #b0aeb0 100%);
-  background-image: linear-gradient(to bottom, #b8b6b8 0%, #b0aeb0 100%);
+  border-left: 1px solid #ddd;
+  background-color: #eee;
 }
 .tab-item:first-child {
   border-left: 0;
 }
 .tab-item.active {
-  background-color: #d4d2d4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4d2d4), color-stop(100%, #cccacc));
-  background-image: -webkit-linear-gradient(top, #d4d2d4 0%, #cccacc 100%);
-  background-image: linear-gradient(to bottom, #d4d2d4 0%, #cccacc 100%);
+  background-color: #fafafa;
 }
 .tab-item .icon-close-tab {
   position: absolute;
@@ -2326,26 +2280,8 @@ td:last-child {
   transform: translateY(-50%);
   z-index: 10;
 }
-.tab-item:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  background-color: rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  transition: opacity .1s linear;
-  z-index: 1;
-}
-.tab-item:hover:not(.active):after {
-  opacity: 1;
-}
 .tab-item:hover .icon-close-tab {
   opacity: 1;
-}
-.tab-item .icon-close-tab:hover {
-  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .tab-item-fixed {
