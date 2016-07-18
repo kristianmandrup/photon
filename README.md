@@ -4,6 +4,12 @@
 
 UI toolkit for building desktop apps with Electron.
 
+*Note: Updated to work with Electron 1.2.7*
+
+- Based on theme branch [@photon](https://github.com/connors/photon/compare/themeit)
+- Added resize and dialog components [@keytelematics](https://github.com/keytelematics/photon/commits/master)
+- Updated sliders [@MauriceConrad](https://github.com/MauriceConrad/photon/commits/master)
+
 ## Getting started
 
 * Clone the repo with `git clone https://github.com/connors/photon.git`
